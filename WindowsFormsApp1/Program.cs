@@ -16,7 +16,14 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new btnCashier());
+            load queuingForm = new load();
+            CashierWindowQueueForm cashierForm = new CashierWindowQueueForm();
+
+            // Show both forms.
+            queuingForm.Show();
+            cashierForm.Show();
+
+            Application.Run();
         }
     }
 }

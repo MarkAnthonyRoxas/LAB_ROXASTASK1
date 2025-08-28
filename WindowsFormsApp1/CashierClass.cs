@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    internal class CashierClass
+    public class CashierClass
     {
+        private int x = 10000;
+ 
+        public static Queue<string> CashierQueue = new Queue<string>();
+        public static string getNumberInQueue = "";
+
+ 
+        public CashierClass()
+        {
+        }
+
+ 
+        public string CashierGeneratedNumber(string CashierNumber)
+        {
+            x++;
+            CashierNumber = CashierNumber + x.ToString();
+            return CashierNumber;
+        }
     }
 }
